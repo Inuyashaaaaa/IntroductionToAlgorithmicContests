@@ -23,10 +23,9 @@ int main()
 	const int MOD = 1e6;
 	int n,S = 0;
 	scanf("%d",&n);
-	if(n>25) n=25;
+//	if(n>25) n=25;
 	for(int i=1;i<=n;i++)
 	{
-		break;
 		int factorial = 1;
 		for(int j=1;j<=i;j++)
 		{

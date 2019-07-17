@@ -9,6 +9,7 @@ int main()
 	while(fscanf(fin,"%d",&x)==1)
 	{
 		s+=x;
+		 
 		if(x<min)min=x;
 		if(x>max)max=x;
 		n++;
