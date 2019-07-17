@@ -4,37 +4,41 @@
 
 int main()
 {
+
 	int T;
+	int cnt=0;
 	scanf("%d",&T);
 	while(T--)
 	{
-		char s[maxn];
+		if(cnt++)
+		printf("\n");
+		int ans=1;
+		char s[100];
 		scanf("%s",s);
 		int len=strlen(s);
-		int step;
-		for(step=1;step<=len/2;step++)
+		
+		for(;ans<len;ans++)
 		{
-			int judge=1;
-			for(int j=0;j<step;j++)
-			{
-				for(int i=j;i<len-step;i+=step)
+			if(len%ans!=0)
+			continue;
+			int judge=0;
+			for(int i=0;i<ans;i++)
+			{		
+				for(int j=i+ans;j<len;j+=ans)
 				{
-					if(s[i]!=s[i+step])
+					if(s[i]!=s[j])
 					{
-						judge=0;
+						judge=1;
 						break;
 					}
 				}
-				if(!judge)
-				break;
-			}
-			if(judge)
+				if(judge)
+				break; 
+			} 
+			if(!judge)
 			break;
 		}
-		if(T)
-		printf("%d\n\n",step);
-		else
-		printf("%d\n",step);
-	}
+		printf("%d\n",ans);
+	} 
 	return 0;
 }
