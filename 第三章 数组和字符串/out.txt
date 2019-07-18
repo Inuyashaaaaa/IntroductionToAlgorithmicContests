@@ -21,3 +21,4 @@
 
 655/990 = 0.6(61)
    2 = number of digits in repeating cycle
+
