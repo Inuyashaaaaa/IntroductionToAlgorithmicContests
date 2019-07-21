@@ -28,7 +28,7 @@ bool f(int i,char* s)
 	s[1] = s[2];
 	s[2] = s[4];
 	s[4] = ch;
-	return f(i - 1, temp)|| f(i - 1, temp);
+	return f(i - 1, temp)|| f(i - 1, s);
 }
 
 int main()
