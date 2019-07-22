@@ -118,11 +118,8 @@ int main()
 		}
 		else
 		{
-			cout << word[0] << endl;
+			cout << word[0] << "?" << endl;
 		}
 	}
 	return 0;
 }
-
-
-
