@@ -8,5 +8,6 @@ int main(){
     while(cin >> a >> b){
         cout << min(a, b) << endl;
     }
+    system("pause");
     return 0;
 }

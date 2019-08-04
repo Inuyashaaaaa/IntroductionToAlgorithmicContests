@@ -20,6 +20,6 @@ int main() {
             else cout << x << " not found" << endl;
         }
     }
-    // system("pause");
+    system("pause");
     return 0;
 }
