@@ -1,44 +1,33 @@
 #include <iostream>
-#include <string>
+#include <cstring>
+#include <cmath>
 #include <algorithm>
-#include <map>
+#include <string>
+#define ll long long
+#define MAXN 1000000 + 5
 using namespace std;
-
-
-string addBinary(string a, string b) {
-    string s;
-    int i = a.length() - 1;
-    int j = b.length() -1;
-    int e = 0;
-    while (i >= 0 || j >= 0) {
-        if (j >= 0) e += b.at(j--) - '0';
-        if (i >= 0) e += a.at(i--) - '0';
-        s += (e % 2) + '0';
-        e = e / 2;
-    }
-    if (e != 0) s += e + '0';
-    return s;
-}
-
-int main() {
-    int T;
-    cin >> T;
-    for(int i = 0; i < T; i++) {
-        string a, b;
+int INF = 0x7fffffff;
+ 
+int main(){
+    int t;
+    ll k, m, n;
+    cin >> t;
+    string a, b;
+    while(t--) {
         cin >> a >> b;
-        int len1 = a.length();
-        int len2 = b.length();
-        map<string, int> Map;
-        int maxn = min(int(len1 + len2) * 2, int(1e5 + 1));
-        Map[addBinary(a, b)] = 0;
-        for(int i = 0; i < maxn; i++) {
-            b += '0';
-            Map[addBinary(a, b)] = i + 1;
+        int i, j;
+        int tt=0, tz=0;
+ 
+        for(i = b.length()-1; i>=0; i--){
+            if(b[i]=='1') break;
+            tt++;
         }
-        cout << Map.begin() -> second << endl;
+ 
+        for(j = a.length()-1-tt,tz=0; j>=0; j--){
+            if(a[j]=='1') break;
+            tz++;
+        }
+        cout << tz << endl;
     }
-    
-    
-    system("pause");
     return 0;
 }
