@@ -4,7 +4,6 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "G:\\\\dev\\\\Dev-Cpp\\\\MinGW64\\\\include",
                 "G:\\dev\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include"
             ],
             "defines": [
