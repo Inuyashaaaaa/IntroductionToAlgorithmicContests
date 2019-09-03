@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 #define LL long long
 using namespace std;
-
 const int maxn = 2e5 + 10;
 
 unordered_map<int, vector<int>> m;
@@ -21,7 +20,6 @@ int main() {
         weight[c] += m[b].size();
         m[a].push_back(b);
         m[b].push_back(c);
-    }
-    
+    }    
     return 0;
-}
+}    
