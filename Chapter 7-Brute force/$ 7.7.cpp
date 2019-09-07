@@ -63,7 +63,7 @@ int main() {
     for(int i = 0; i < tree[root].size(); i++)
       ans = max(ans, tree[root][i].L + tree[root][i].R);
     if(ans != -1)
-    printf("%.10lf\n", ans);
+    printf("%.15lf\n", ans);
     else 
     printf("%.0lf\n", ans);
   }

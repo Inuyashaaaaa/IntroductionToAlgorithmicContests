@@ -21,7 +21,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     int B[10];
-    printSubset(10, B, 1);
+    printSubset(5, B, 1);
 
     return 0;
 }
