@@ -8,8 +8,8 @@ const int maxn = 1e5 + 50;
 LL w[maxn];
 LL tot[maxn];
 int main() {
-    // freopen("in.txt", "r", stdin);
-    // freopen("out.txt", "w", stdout);
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
     ios::sync_with_stdio(false);
     cin.tie(0);
     int n;
@@ -36,6 +36,7 @@ int main() {
                     sum = w[tmp] * tot[i - 1];
                 else 
                     sum = w[tmp] * (tot[i - 1] - tot[s.top()]);
+                cout << sum << endl;
                 better = max(better, sum);
             }
         }
