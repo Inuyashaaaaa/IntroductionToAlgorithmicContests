@@ -1,48 +1,6 @@
-3 3
-3.4
-...
-.2.
-7 18
-...4.2.
-...45..
-222..3.
-...2..3
-.24...2
-...2.3.
-22..3..
+1 1
+11 10 10 10 10 6
+3 10 10 10 10 12                
+9 10 10 10 10 6
+10 10 10 10 10 12
 0 0
-
-bool dfs(int id, char ch){
-    while(ans[id/n][id%n] != '.') id++;
-    if(id == n * n) return true;
-    int r = id / n, c = id % n, ec = n;
-    for(int i = r; i < n; i++){
-        for(int j = c; j < ec; j++){
-            if(ans[i][j] != '.') { ec = j;  break; }
-            int sum = (i - r + 1) * (j - c + 1);
-            if(sum > 9) { ec = j;  break; }
-            int digit = 99;
-            bool valid = true;
-            for(int k = r; k <= i; k++){
-                for(int l = c; l <= j; l++){
-                    if(seat[k][l] != '.'){
-                        if(digit != 99){ valid = false;  break; }
-                        digit = seat[k][l] - '0';
-                    }
-                }
-                if(!valid) break;
-            }
-            if(!valid) { ec = j;  break; }
-            if(digit < sum) { ec = j;  break; }
-            if(digit > sum) continue;
-            for(int k = r; k <= i; k++){
-                for(int l = c; l <= j; l++) ans[k][l] = ch;
-            }
-            if(dfs(id + j - c + 1, ch + 1)) return true;
-            for(int k = r; k <= i; k++){
-                for(int l = c; l <= j; l++) ans[k][l] = '.';
-            }
-        }
-    }
-    return false;
-}
