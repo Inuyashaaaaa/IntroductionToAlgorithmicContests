@@ -8,6 +8,11 @@ int a[maxn];
 bool vis[maxn];
 vector<double> vec;
 
+bool cmp(double a,double b)
+{
+    return a>b;
+}
+
 void dfs(int pos, double num) {
     //cout << num << endl;
     int size = G[pos].size();
@@ -27,8 +32,8 @@ void dfs(int pos, double num) {
 }
 
 int main() {
-    // freopen("in.txt", "r", stdin);
-    // freopen("out.txt", "w", stdout);
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
     ios::sync_with_stdio(false);
     cin.tie(0);
     int n;
@@ -45,12 +50,11 @@ int main() {
     for(int i = 0; i < n; i++) {
         cin >> a[i];
     }
-
+    sort(a, a + n);
     memset(vis, 0, sizeof(vis));
     dfs(1, 1);
+    sort(vec.begin(),vec.end(),cmp);
     double ans = 0;
-    sort(a, a + n);
-    sort(vec.begin(), vec.end());
     for(int i = 0; i < vec.size(); i++) {
         ans += vec[i] * a[i];
     }
