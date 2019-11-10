@@ -1,3 +1,10 @@
-3
-3
-6
+boring
+non-boring
+non-boring
+boring
+non-boring
+boring
+non-boring
+boring
+non-boring
+boring
