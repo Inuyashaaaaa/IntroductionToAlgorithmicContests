@@ -8,12 +8,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     srand(time(NULL));
-    int maxn = 1e4;
-    for(int i = 0; i < maxn; i++) {
-        int w = 1e5;
+    int maxn = 1e2;
+    for(int i = 0; i < maxn; i++)
+    {
+        int w = rand() % int(1e5);
         cout << w << endl;
         for(int j = 0; j < w; j++) {
-            cout << 1e5 << " ";
+            cout << rand() % w + 1 << " ";
         }
         cout << endl;
     }

@@ -13,7 +13,9 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     int n;
+    int kase = 0;
     while(cin >> n) {
+        if(kase++) cout << endl;
         memset(tot, 0, sizeof(tot));
         for(int i = 0; i < n; i++) {
             cin >> w[i];
@@ -36,7 +38,7 @@ int main() {
                     sum = w[tmp] * tot[i - 1];
                 else 
                     sum = w[tmp] * (tot[i - 1] - tot[s.top()]);
-                cout << sum << endl;
+                //cout << sum << endl;
                 better = max(better, sum);
             }
         }
