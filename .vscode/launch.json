@@ -4,6 +4,8 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
+    
         {
             "name": "g++.exe build and debug active file",
             "type": "cppdbg",
@@ -13,8 +15,9 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
+            // "console":"none",
             "miDebuggerPath": "G:\\dev\\Dev-Cpp\\MinGW64\\bin\\gdb.exe",
             "setupCommands": [
                 {

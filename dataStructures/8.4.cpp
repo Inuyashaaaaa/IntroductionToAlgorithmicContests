@@ -6,26 +6,27 @@ using namespace std;
 //Huffman
 
 int main() {
-    // freopen("in.txt", "r", stdin);
-    // freopen("out.txt", "w", stdout);
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n, x;
+    double n, x;
     cin >> n;
-    priority_queue<int, vector<int>, greater<int>> pq;
+    priority_queue<double, vector<double>, greater<double>> pq;
     for(int i = 0; i < n; i++) {
         cin >> x;
         pq.push(x);
     }
-    LL ans = 0 ;
+    double ans = 0 ;
     while(pq.size() != 1) {
-        int a = pq.top();
+        double a = pq.top();
         pq.pop();
-        int b = pq.top();
+        double b = pq.top();
         pq.pop();
         pq.push(a + b);
-        ans += a + b;
+        cout << (a + b) << endl;
+        // ans += a + b;
     }
-    cout << ans << endl;
+    // cout << ans << endl;
     return 0;
 }
