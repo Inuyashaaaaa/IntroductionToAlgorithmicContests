@@ -28,8 +28,8 @@ void search(int cur, int* A) {
 }
 
 int main() {
-    //freopen("in.txt", "r", stdin);
-    //freopen("out.txt", "w", stdout);
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
     ios::sync_with_stdio(false);
     cin.tie(0);
     n = 8;

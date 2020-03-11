@@ -27,8 +27,8 @@ void search(int cur, int* A) {
 }
 
 int main() {
-    //freopen("in.txt", "r", stdin);
-    //freopen("out.txt", "w", stdout);
+    // freopen("in.txt", "r", stdin);
+    // freopen("out.txt", "w", stdout);
     ios::sync_with_stdio(false);
     int ans[20];
     for(int i = 1; i <= 10; i++) {

@@ -38,7 +38,7 @@ int main() {
     cin.tie(0);
     int n = 3;
     int A[3];
-    int P[3] = {1, 2, 3};
+    int P[3] = {1, 2, 4};
     printPermutation(3, A, 0, P);
 
     return 0;
